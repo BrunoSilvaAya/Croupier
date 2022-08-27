@@ -53,20 +53,22 @@ public class CroupierTests
         var result = await _client.GetAsync("/see-deck?sessionId=" + id);
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
-        var deckJson = await result.Content.ReadAsStringAsync();
-        var deck = JsonSerializer.Deserialize<List<Card>>(deckJson);
+        var deck = JsonSerializer.Deserialize<List<Card>>(
+            await result.Content.ReadAsStringAsync()
+        );
 
         var shuffledResponse = await _client.GetAsync("/shuffle-deck?sessionId=" + id);
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
-        var shuffledDeckJson = await shuffledResponse.Content.ReadAsStringAsync();
-        var shuffledDeck = JsonSerializer.Deserialize<List<Card>>(shuffledDeckJson);
+        var shuffledDeck = JsonSerializer.Deserialize<List<Card>>(
+            await shuffledResponse.Content.ReadAsStringAsync()
+        );
 
         Assert.NotNull(deck);
         Assert.NotNull(shuffledDeck);
         Assert.Equal(deck.Count, shuffledDeck.Count);
 
-        Assert.False(deck.All(shuffledDeck.Contains));
+        Assert.False(deck.SequenceEqual(shuffledDeck));
     }
     [Fact]
     public async Task DrawCardDrawsOnlyOneCard()
@@ -75,12 +77,75 @@ public class CroupierTests
         var result = await _client.GetAsync("/draw-card?sessionId=" + id);
 
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
-        var deck = await result.Content.ReadAsStringAsync();
-        Assert.IsType<Card>(JsonSerializer.Deserialize<Card>(deck));
+        
+        Assert.IsType<Card>(JsonSerializer.Deserialize<Card>(
+            await result.Content.ReadAsStringAsync()
+        ));
     }
+    [Fact]
+    public async Task DrawCardDrawsCardOnTopOfDeck()
+    {
+        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
 
+        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+
+        var deck = JsonSerializer.Deserialize<List<Card>>(
+            await result.Content.ReadAsStringAsync()
+        );
+
+        var cardResult = await _client.GetAsync("/draw-card?sessionId=" + id);
+        var card = JsonSerializer.Deserialize<Card>(
+            await cardResult.Content.ReadAsStringAsync()
+        );
+        
+        Assert.Equal(deck[0],card);
+    }
+    [Fact]
+    public async Task DrawCardRemovesCardFromDeck()
+    {
+        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
+
+        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+
+        var deck = JsonSerializer.Deserialize<List<Card>>(
+            await result.Content.ReadAsStringAsync()
+        );
+
+        await _client.GetAsync("/draw-card?sessionId=" + id);
+        
+        var resultAfterDraw = await _client.GetAsync("/see-deck?sessionId=" + id);
+        Assert.Equal(HttpStatusCode.OK, resultAfterDraw.StatusCode);
+
+        var deckAfterDraw = JsonSerializer.Deserialize<List<Card>>(
+            await resultAfterDraw.Content.ReadAsStringAsync()
+        );
+
+        Assert.NotNull(deck);
+        Assert.NotNull(deckAfterDraw);
+        Assert.Equal(deck[1],deckAfterDraw[0]);
+    }
+    [Fact]
+    public async Task DrawingAllCardsEmptiesDeck()
+    {
+        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
+
+        Enumerable.Range(1,52).ToList().ForEach(e => {
+            _client.GetAsync("/draw-card?sessionId=" + id);
+        });
+        
+        var voidDraw = await _client.GetAsync("/draw-card?sessionId=" + id);
+        var card = JsonSerializer.Deserialize<Card>(
+            await voidDraw.Content.ReadAsStringAsync()
+        );
+        
+        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+
+        var deck = await result.Content.ReadAsStringAsync();
+        Console.WriteLine(deck);
+        Assert.Null(card?.code);
+    }
     //TODO: refactor querystring to become a route param
-
-    //test drawing returns the card on the top of pile
-    //test drawing until empty
 }

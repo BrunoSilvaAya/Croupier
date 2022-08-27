@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\Croupier\\Croupier.Tests\\Croupier.Tests.csproj": {}
+    "/home/brunosilvadev/GitHub/Croupier/Croupier.Tests/Croupier.Tests.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\Croupier\\Croupier.App\\Croupier.csproj": {
+    "/home/brunosilvadev/GitHub/Croupier/Croupier.App/Croupier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Croupier\\Croupier.App\\Croupier.csproj",
+        "projectUniqueName": "/home/brunosilvadev/GitHub/Croupier/Croupier.App/Croupier.csproj",
         "projectName": "Croupier",
-        "projectPath": "C:\\GitHub\\Croupier\\Croupier.App\\Croupier.csproj",
-        "packagesPath": "C:\\Users\\U013030\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Croupier\\Croupier.App\\obj\\",
+        "projectPath": "/home/brunosilvadev/GitHub/Croupier/Croupier.App/Croupier.csproj",
+        "packagesPath": "/home/brunosilvadev/.nuget/packages/",
+        "outputPath": "/home/brunosilvadev/GitHub/Croupier/Croupier.App/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\U013030\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/brunosilvadev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,36 +69,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\GitHub\\Croupier\\Croupier.Tests\\Croupier.Tests.csproj": {
+    "/home/brunosilvadev/GitHub/Croupier/Croupier.Tests/Croupier.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Croupier\\Croupier.Tests\\Croupier.Tests.csproj",
+        "projectUniqueName": "/home/brunosilvadev/GitHub/Croupier/Croupier.Tests/Croupier.Tests.csproj",
         "projectName": "Croupier.Tests",
-        "projectPath": "C:\\GitHub\\Croupier\\Croupier.Tests\\Croupier.Tests.csproj",
-        "packagesPath": "C:\\Users\\U013030\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Croupier\\Croupier.Tests\\obj\\",
+        "projectPath": "/home/brunosilvadev/GitHub/Croupier/Croupier.Tests/Croupier.Tests.csproj",
+        "packagesPath": "/home/brunosilvadev/.nuget/packages/",
+        "outputPath": "/home/brunosilvadev/GitHub/Croupier/Croupier.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\U013030\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/brunosilvadev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\GitHub\\Croupier\\Croupier.App\\Croupier.csproj": {
-                "projectPath": "C:\\GitHub\\Croupier\\Croupier.App\\Croupier.csproj"
+              "/home/brunosilvadev/GitHub/Croupier/Croupier.App/Croupier.csproj": {
+                "projectPath": "/home/brunosilvadev/GitHub/Croupier/Croupier.App/Croupier.csproj"
               }
             }
           }
@@ -153,7 +149,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     }

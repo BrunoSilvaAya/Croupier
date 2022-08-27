@@ -1,7 +1,7 @@
 ﻿namespace Croupier.Tests;
-public class Card
+public record Card
 {
-    public string? Code { get; set; }
-    public string? Value { get; set; }
-    public string? Suit { get; set; }
+    public string? code { get; set; }
+    public string? value { get; set; }
+    public string? suit { get; set; }
 }
