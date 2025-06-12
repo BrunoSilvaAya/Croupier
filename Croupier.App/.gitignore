@@ -1,14 +1,14 @@
+# Build artifacts
+bin/
+obj/
 
-.vscode/launch.json
-.vscode/tasks.json
-.vs/Croupier/config/applicationhost.config
-.vs/Croupier/v17/.suo
-.vs/Croupier/DesignTimeBuild/.dtbcache.v2
-bin/Debug/net6.0/Croupier.dll
-*.dll
+# Visual Studio
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# .NET build outputs
 *.dll
 *.pdb
 *.v2
-*.dll
-*.pdb
-.vs/Croupier/DesignTimeBuild/.dtbcache.v2
