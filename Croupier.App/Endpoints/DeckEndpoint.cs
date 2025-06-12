@@ -12,10 +12,10 @@ public class DeckEndpoint : IEndpoint
     }
     public void RegisterRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/new-game", NewSession);
-        app.MapGet("/draw-card", DrawCard);
-        app.MapGet("/see-deck", SeeDeck);
-        app.MapGet("/shuffle-deck", ShuffleDeck);
+        app.MapGet("/new-game/{numberOfDecks?}", (int? numberOfDecks) => NewSession(numberOfDecks));
+        app.MapGet("/draw-card/{sessionId}", (string sessionId) => DrawCard(sessionId));
+        app.MapGet("/see-deck/{sessionId}", (string sessionId) => SeeDeck(sessionId));
+        app.MapGet("/shuffle-deck/{sessionId}", (string sessionId) => ShuffleDeck(sessionId));
     }
 
     //TODO: add some asynchronicity to the application
@@ -25,7 +25,13 @@ public class DeckEndpoint : IEndpoint
     }
     public Card? DrawCard(string sessionId)
     {
-        return _manager.DrawCard(sessionId);
+        var card = _manager.DrawCard(sessionId);
+        if (card == null)
+        {
+            // Return an empty card object instead of null
+            return new Card("empty", "empty") { Code = null, Value = null, Suit = null };
+        }
+        return card;
     }
     //TODO: make it route param and not querystring
     public Stack<Card>? SeeDeck(string sessionId)
