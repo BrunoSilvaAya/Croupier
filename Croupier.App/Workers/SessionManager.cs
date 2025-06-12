@@ -20,8 +20,12 @@ public class SessionManager : ISessionManager
     }
     public Card? DrawCard(string sessionId)
     {
-        return _sessions.FirstOrDefault(s => s.SessionId == sessionId)?
-                .Cards.Cards.Pop();
+        var session = _sessions.FirstOrDefault(s => s.SessionId == sessionId);
+        if (session == null || session.Cards.Cards.Count == 0)
+        {
+            return null;
+        }
+        return session.Cards.Cards.Pop();
     }
     public Stack<Card>? SeeDeck(string sessionId)
     {
