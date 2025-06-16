@@ -25,7 +25,17 @@ public class SessionManager : ISessionManager
 
     public Card? DrawCard(string sessionId)
     {
-        return FindSession(sessionId)?.Cards.Cards.Pop();
+        var session = FindSession(sessionId);
+        if (session == null)
+        {
+            return null;
+        }
+        var cards = session.Cards.Cards;
+        if (cards.Count == 0)
+        {
+            return null;
+        }
+        return cards.Pop();
     }
 
     public Stack<Card>? SeeDeck(string sessionId)
