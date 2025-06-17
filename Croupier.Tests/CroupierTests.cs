@@ -24,41 +24,37 @@ public class CroupierTests
     {
         var id = await _client.GetStringAsync("/new-game");
         Assert.True(id.Length > 5 && id.Length < 10);
-    }
-    [Fact]
+    }    [Fact]
     public async Task NormalDeckContains52Cards()
     {
         var id = await _client.GetStringAsync("/new-game");
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
 
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
         var deck = await result.Content.ReadAsStringAsync();
         Assert.Equal(52, JsonSerializer.Deserialize<List<Card>>(deck)?.Count);
-    }
-    [Fact]
+    }    [Fact]
     public async Task MultipleDeckContainsCorrectNumberOfCards()
     {
-        var id = await _client.GetStringAsync("/new-game?numberOfDecks=3");
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var id = await _client.GetStringAsync("/new-game/3");
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
 
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
         var deck = await result.Content.ReadAsStringAsync();
         Assert.Equal(3 * 52, JsonSerializer.Deserialize<List<Card>>(deck)?.Count);
-    }
-
-    [Fact]
+    }    [Fact]
     public async Task ShufflerReallyShuffles()
     {
-        var id = await _client.GetStringAsync("/new-game?numberOfDecks=3");
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var id = await _client.GetStringAsync("/new-game/3");
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
         var deck = JsonSerializer.Deserialize<List<Card>>(
             await result.Content.ReadAsStringAsync()
         );
 
-        var shuffledResponse = await _client.GetAsync("/shuffle-deck?sessionId=" + id);
-        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+        var shuffledResponse = await _client.PostAsync($"/sessions/{id}/shuffle-deck", null);
+        Assert.Equal(HttpStatusCode.OK, shuffledResponse.StatusCode);
 
         var shuffledDeck = JsonSerializer.Deserialize<List<Card>>(
             await shuffledResponse.Content.ReadAsStringAsync()
@@ -69,53 +65,52 @@ public class CroupierTests
         Assert.Equal(deck.Count, shuffledDeck.Count);
 
         Assert.False(deck.SequenceEqual(shuffledDeck));
-    }
-    [Fact]
+    }    [Fact]
     public async Task DrawCardDrawsOnlyOneCard()
     {
         var id = await _client.GetStringAsync("/new-game");
-        var result = await _client.GetAsync("/draw-card?sessionId=" + id);
+        var result = await _client.GetAsync($"/sessions/{id}/draw-card");
 
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
         
         Assert.IsType<Card>(JsonSerializer.Deserialize<Card>(
             await result.Content.ReadAsStringAsync()
         ));
-    }
-    [Fact]
+    }    [Fact]
     public async Task DrawCardDrawsCardOnTopOfDeck()
     {
-        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
+        var id = await _client.GetStringAsync("/new-game/1");
 
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
         var deck = JsonSerializer.Deserialize<List<Card>>(
             await result.Content.ReadAsStringAsync()
         );
 
-        var cardResult = await _client.GetAsync("/draw-card?sessionId=" + id);
+        var cardResult = await _client.GetAsync($"/sessions/{id}/draw-card");
         var card = JsonSerializer.Deserialize<Card>(
             await cardResult.Content.ReadAsStringAsync()
         );
         
-        Assert.Equal(deck[0],card);
-    }
-    [Fact]
+        Assert.NotNull(deck);
+        Assert.NotNull(card);
+        Assert.Equal(deck[0], card);
+    }    [Fact]
     public async Task DrawCardRemovesCardFromDeck()
     {
-        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
+        var id = await _client.GetStringAsync("/new-game/1");
 
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
         var deck = JsonSerializer.Deserialize<List<Card>>(
             await result.Content.ReadAsStringAsync()
         );
 
-        await _client.GetAsync("/draw-card?sessionId=" + id);
+        await _client.GetAsync($"/sessions/{id}/draw-card");
         
-        var resultAfterDraw = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var resultAfterDraw = await _client.GetAsync($"/sessions/{id}/see-deck");
         Assert.Equal(HttpStatusCode.OK, resultAfterDraw.StatusCode);
 
         var deckAfterDraw = JsonSerializer.Deserialize<List<Card>>(
@@ -124,28 +119,25 @@ public class CroupierTests
 
         Assert.NotNull(deck);
         Assert.NotNull(deckAfterDraw);
-        Assert.Equal(deck[1],deckAfterDraw[0]);
-    }
-    [Fact]
+        Assert.Equal(deck[1], deckAfterDraw[0]);
+    }    [Fact]
     public async Task DrawingAllCardsEmptiesDeck()
-    {
-        var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
+    {        var id = await _client.GetStringAsync("/new-game/1");
 
-        Enumerable.Range(1,52).ToList().ForEach(e => {
-            _client.GetAsync("/draw-card?sessionId=" + id);
-        });
+        for (int i = 0; i < 52; i++)
+        {
+            await _client.GetAsync($"/sessions/{id}/draw-card");
+        }
         
-        var voidDraw = await _client.GetAsync("/draw-card?sessionId=" + id);
+        var voidDraw = await _client.GetAsync($"/sessions/{id}/draw-card");
         var card = JsonSerializer.Deserialize<Card>(
             await voidDraw.Content.ReadAsStringAsync()
         );
         
-        var result = await _client.GetAsync("/see-deck?sessionId=" + id);
+        var result = await _client.GetAsync($"/sessions/{id}/see-deck");
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 
-        var deck = await result.Content.ReadAsStringAsync();
-        Console.WriteLine(deck);
+        var deck = await result.Content.ReadAsStringAsync();        Console.WriteLine(deck);
         Assert.Null(card?.code);
     }
-    //TODO: refactor querystring to become a route param
 }

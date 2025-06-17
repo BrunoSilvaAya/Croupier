@@ -4,18 +4,16 @@ using Croupier.Workers;
 namespace Croupier.Endpoints;
 
 public class DeckEndpoint : IEndpoint    
-{
-    private ISessionManager _manager;
+{    private readonly ISessionManager _manager;
     public DeckEndpoint(IServiceProvider serviceProvider)
     {
-        _manager = serviceProvider.GetService<ISessionManager>() ?? throw new ArgumentNullException(nameof(ISessionManager));
-    }
-    public void RegisterRoutes(IEndpointRouteBuilder app)
+        _manager = serviceProvider.GetService<ISessionManager>() ?? throw new ArgumentNullException(nameof(serviceProvider), "ISessionManager not registered");
+    }public void RegisterRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/new-game", NewSession);
-        app.MapGet("/draw-card", DrawCard);
-        app.MapGet("/see-deck", SeeDeck);
-        app.MapGet("/shuffle-deck", ShuffleDeck);
+        app.MapGet("/new-game/{numberOfDecks:int?}", NewSession);
+        app.MapGet("/sessions/{sessionId}/draw-card", DrawCard);
+        app.MapGet("/sessions/{sessionId}/see-deck", SeeDeck);
+        app.MapPost("/sessions/{sessionId}/shuffle-deck", ShuffleDeck);
     }
 
     //TODO: add some asynchronicity to the application
@@ -26,9 +24,7 @@ public class DeckEndpoint : IEndpoint
     public Card? DrawCard(string sessionId)
     {
         return _manager.DrawCard(sessionId);
-    }
-    //TODO: make it route param and not querystring
-    public Stack<Card>? SeeDeck(string sessionId)
+    }    public Stack<Card>? SeeDeck(string sessionId)
     {
         return _manager.SeeDeck(sessionId);
     }

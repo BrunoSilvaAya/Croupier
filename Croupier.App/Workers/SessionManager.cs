@@ -8,20 +8,22 @@ public class SessionManager : ISessionManager
     public SessionManager()
     {
         _sessions = new();
-    }
-    public string NewSession(int? numberOfDecks)
+    }    public string NewSession(int? numberOfDecks)
     {
         _sessions.Add(new Session(numberOfDecks ?? 1));
-        return _sessions.Last().SessionId;
+        return _sessions[_sessions.Count - 1].SessionId;
     }
     public Session? GetSession(string sessionId)
     {
         return _sessions.FirstOrDefault(s => s.SessionId == sessionId);
-    }
-    public Card? DrawCard(string sessionId)
+    }    public Card? DrawCard(string sessionId)
     {
-        return _sessions.FirstOrDefault(s => s.SessionId == sessionId)?
-                .Cards.Cards.Pop();
+        var session = _sessions.FirstOrDefault(s => s.SessionId == sessionId);
+        if (session?.Cards.Cards.Count > 0)
+        {
+            return session.Cards.Cards.Pop();
+        }
+        return null;
     }
     public Stack<Card>? SeeDeck(string sessionId)
     {
