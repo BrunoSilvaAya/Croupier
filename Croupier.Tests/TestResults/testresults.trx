@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="6d7fcafb-9bb0-413d-8203-3dda470e91cc" name="@runnervmf4ws1 2025-09-19 21:53:57" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-09-19T21:53:57.8761310+00:00" queuing="2025-09-19T21:53:57.8761311+00:00" start="2025-09-19T21:53:56.4815739+00:00" finish="2025-09-19T21:53:58.1861800+00:00" />
+  <TestSettings name="default" id="8350f6eb-1809-46ba-816b-5b5e5edf6c3a">
+    <Deployment runDeploymentRoot="_runnervmf4ws1_2025-09-19_21_53_57" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="28aafcbf-db57-4f2d-ba09-8dffb5cb2508" testId="eab402c8-8464-4b57-9480-17acd7374134" testName="Croupier.Tests.Infrastructure.SessionStoreTests.GetSession_WithValidSessionId_ReturnsCorrectSession" computerName="runnervmf4ws1" duration="00:00:00.0004423" startTime="2025-09-19T21:53:57.8380830+00:00" endTime="2025-09-19T21:53:57.8380831+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28aafcbf-db57-4f2d-ba09-8dffb5cb2508" />
+    <UnitTestResult executionId="f63a3388-99ba-444e-b4ff-aeec85c15532" testId="a38ac826-9e7c-e830-4dbd-ba09c0ecc0c5" testName="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenAllCardsDrawn_EmptiesDeck" computerName="runnervmf4ws1" duration="00:00:00.2698287" startTime="2025-09-19T21:53:58.0686665+00:00" endTime="2025-09-19T21:53:58.0686700+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f63a3388-99ba-444e-b4ff-aeec85c15532" />
+    <UnitTestResult executionId="7a8dad8a-2cb0-41e5-9f4f-be851d125d0c" testId="054e758f-3341-a4de-f623-c5016bfeee29" testName="Croupier.Tests.Domain.CardTests.CreateCard_WithCustomValues_GeneratesExpectedProperties" computerName="runnervmf4ws1" duration="00:00:00.0188277" startTime="2025-09-19T21:53:57.7930401+00:00" endTime="2025-09-19T21:53:57.7930402+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a8dad8a-2cb0-41e5-9f4f-be851d125d0c" />
+    <UnitTestResult executionId="6406094f-3328-4ebc-b78d-57b1d8d2e919" testId="8e0e8d78-359b-64e2-ee18-72b6476a4ec2" testName="Croupier.Tests.Infrastructure.SessionStoreTests.GetSession_WithInvalidSessionId_ReturnsNull" computerName="runnervmf4ws1" duration="00:00:00.0006896" startTime="2025-09-19T21:53:57.8374604+00:00" endTime="2025-09-19T21:53:57.8374605+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6406094f-3328-4ebc-b78d-57b1d8d2e919" />
+    <UnitTestResult executionId="f2ab8aa4-de8b-4157-ad2b-c158b30727ab" testId="f50a9194-5bfa-7b5f-dd1e-619b705cdeeb" testName="Croupier.Tests.Domain.DeckTests.CreateDeck_WithSpecificId_HasCorrectDeckId" computerName="runnervmf4ws1" duration="00:00:00.0188694" startTime="2025-09-19T21:53:57.7935364+00:00" endTime="2025-09-19T21:53:57.7935365+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2ab8aa4-de8b-4157-ad2b-c158b30727ab" />
+    <UnitTestResult executionId="67cca989-8cc9-49cd-bb08-d99bc25e7aa0" testId="2a316688-754b-8059-dd30-37f96ccd4db8" testName="Croupier.Tests.Domain.CardTests.CreateCard_WithTenValue_GeneratesCorrectCode" computerName="runnervmf4ws1" duration="00:00:00.0002480" startTime="2025-09-19T21:53:57.7956030+00:00" endTime="2025-09-19T21:53:57.7956033+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67cca989-8cc9-49cd-bb08-d99bc25e7aa0" />
+    <UnitTestResult executionId="319f4148-9f24-4546-9fb7-5cb3810757ee" testId="6726cf70-fa8f-4759-0749-1b20b2087d46" testName="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_RemovesCardFromDeck" computerName="runnervmf4ws1" duration="00:00:00.0123525" startTime="2025-09-19T21:53:58.1062075+00:00" endTime="2025-09-19T21:53:58.1062077+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="319f4148-9f24-4546-9fb7-5cb3810757ee" />
+    <UnitTestResult executionId="735348b6-b2ce-40ef-b3fe-22699ee56412" testId="fb8a06f4-81fb-34dd-2ebf-ea17f7330427" testName="Croupier.Tests.Endpoints.ShuffleEndpointTests.ShuffleDeck_WhenCalled_ChangesCardOrder" computerName="runnervmf4ws1" duration="00:00:00.2546024" startTime="2025-09-19T21:53:58.0468052+00:00" endTime="2025-09-19T21:53:58.0468053+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="735348b6-b2ce-40ef-b3fe-22699ee56412" />
+    <UnitTestResult executionId="c8038375-c8fd-488d-858a-7e454a21ae8c" testId="55b93f81-76c4-4f54-6f79-84d863277b5e" testName="Croupier.Tests.Endpoints.SeeDeckEndpointTests.SeeDeck_WithSingleDeck_ContainsExactly52Cards" computerName="runnervmf4ws1" duration="00:00:00.2811317" startTime="2025-09-19T21:53:58.0404489+00:00" endTime="2025-09-19T21:53:58.0404490+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8038375-c8fd-488d-858a-7e454a21ae8c" />
+    <UnitTestResult executionId="8abf8781-b4de-40aa-ae82-7c234467eb99" testId="cde54c44-b960-4a4c-517f-de64f25de298" testName="Croupier.Tests.Domain.CardTests.CreateCard_WithAceOfSpades_GeneratesCorrectCode" computerName="runnervmf4ws1" duration="00:00:00.0003574" startTime="2025-09-19T21:53:57.7955200+00:00" endTime="2025-09-19T21:53:57.7955201+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8abf8781-b4de-40aa-ae82-7c234467eb99" />
+    <UnitTestResult executionId="d29d4a16-40ca-4c63-9a85-47b10d678d5a" testId="454b6216-6064-ef62-d8b4-65b4907bdd4d" testName="Croupier.Tests.Domain.DeckTests.CreateDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" computerName="runnervmf4ws1" duration="00:00:00.0002496" startTime="2025-09-19T21:53:57.8380132+00:00" endTime="2025-09-19T21:53:57.8380132+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d29d4a16-40ca-4c63-9a85-47b10d678d5a" />
+    <UnitTestResult executionId="182e0a3c-c735-4f6b-ad73-a6e695f3de0e" testId="0cb9d0c1-25e5-2d52-2336-86d751cba14d" testName="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_ReturnsTopCardFromDeck" computerName="runnervmf4ws1" duration="00:00:00.0127410" startTime="2025-09-19T21:53:58.0937185+00:00" endTime="2025-09-19T21:53:58.0937186+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="182e0a3c-c735-4f6b-ad73-a6e695f3de0e" />
+    <UnitTestResult executionId="37619e83-e1c1-46e0-a4dd-4c27ecbca03a" testId="c797dbd4-9535-7e80-0dd9-ec56ab9e3f4b" testName="Croupier.Tests.Domain.CardTests.CreateCard_WithKingOfHearts_GeneratesCorrectCode" computerName="runnervmf4ws1" duration="00:00:00.0004360" startTime="2025-09-19T21:53:57.7955678+00:00" endTime="2025-09-19T21:53:57.7955678+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37619e83-e1c1-46e0-a4dd-4c27ecbca03a" />
+    <UnitTestResult executionId="0a1c3341-06f0-4cbb-ba0f-e69a56eb6771" testId="3f0add5e-c3e5-f760-66e6-386c33c0d8cd" testName="Croupier.Tests.Endpoints.NewGameEndpointTests.NewGame_WhenCalled_ReturnsIdWithCorrectLength" computerName="runnervmf4ws1" duration="00:00:00.2362089" startTime="2025-09-19T21:53:58.0399895+00:00" endTime="2025-09-19T21:53:58.0399896+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a1c3341-06f0-4cbb-ba0f-e69a56eb6771" />
+    <UnitTestResult executionId="d132bb8b-5afe-4932-8ae6-fd9ba7a65055" testId="3d9760ec-7c5d-687a-a821-f3e5c1afd5c6" testName="Croupier.Tests.Endpoints.SeeDeckEndpointTests.SeeDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" computerName="runnervmf4ws1" duration="00:00:00.0222848" startTime="2025-09-19T21:53:58.0660302+00:00" endTime="2025-09-19T21:53:58.0660303+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d132bb8b-5afe-4932-8ae6-fd9ba7a65055" />
+    <UnitTestResult executionId="e3f84499-e4de-467d-b3cb-afb7a2cab21f" testId="7d4246c0-9395-2af3-070a-b7607f330ac2" testName="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_ReturnsExactlyOneCard" computerName="runnervmf4ws1" duration="00:00:00.0120401" startTime="2025-09-19T21:53:58.0808502+00:00" endTime="2025-09-19T21:53:58.0808503+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3f84499-e4de-467d-b3cb-afb7a2cab21f" />
+    <UnitTestResult executionId="50914619-47d3-4ec4-a4c7-9cc7ef074a54" testId="9220ef90-15c6-f0fb-8769-e05d8dc9fa40" testName="Croupier.Tests.Endpoints.NewGameEndpointTests.NewGame_WhenCalled_ReturnsStringId" computerName="runnervmf4ws1" duration="00:00:00.0175862" startTime="2025-09-19T21:53:58.0606257+00:00" endTime="2025-09-19T21:53:58.0606258+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50914619-47d3-4ec4-a4c7-9cc7ef074a54" />
+    <UnitTestResult executionId="c89db944-ac1d-421c-8132-61930823911d" testId="38b238da-2cb3-6ffc-4ee1-bfb039bc5f1f" testName="Croupier.Tests.Infrastructure.SessionStoreTests.ShuffleDeck_WithValidSession_MaintainsCardCount" computerName="runnervmf4ws1" duration="00:00:00.0059381" startTime="2025-09-19T21:53:57.8379023+00:00" endTime="2025-09-19T21:53:57.8379023+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c89db944-ac1d-421c-8132-61930823911d" />
+    <UnitTestResult executionId="b3cd3768-440c-4dea-8ae0-fca8de4cda05" testId="09c9cf95-84ac-ba1d-88df-dabe29e9b0f9" testName="Croupier.Tests.Domain.DeckTests.CreateDeck_WhenShuffled_HasSameCountButDifferentOrder" computerName="runnervmf4ws1" duration="00:00:00.0105417" startTime="2025-09-19T21:53:57.8378810+00:00" endTime="2025-09-19T21:53:57.8378811+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3cd3768-440c-4dea-8ae0-fca8de4cda05" />
+    <UnitTestResult executionId="46645bbf-0605-467c-971b-ad3cd4d72406" testId="b7938839-3a6e-5caf-1889-2d7336b9a5de" testName="Croupier.Tests.Infrastructure.SessionStoreTests.DrawCard_WithValidSession_ReturnsCardAndUpdatesCount" computerName="runnervmf4ws1" duration="00:00:00.0037965" startTime="2025-09-19T21:53:57.7956195+00:00" endTime="2025-09-19T21:53:57.7956196+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46645bbf-0605-467c-971b-ad3cd4d72406" />
+    <UnitTestResult executionId="b618a8ab-945d-4304-85f2-d51937b7ca2d" testId="deb76e49-fdf8-80ad-c207-c6ac3cd83786" testName="Croupier.Tests.Infrastructure.SessionStoreTests.NewSession_WhenCalled_ReturnsValidSessionId" computerName="runnervmf4ws1" duration="00:00:00.0190859" startTime="2025-09-19T21:53:57.7871929+00:00" endTime="2025-09-19T21:53:57.7872355+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b618a8ab-945d-4304-85f2-d51937b7ca2d" />
+    <UnitTestResult executionId="6dfbaadb-1c64-453f-838d-42b8799a6c65" testId="6ed4bbf7-ce88-6058-efaf-8dc3bb6fbdc6" testName="Croupier.Tests.Domain.DeckTests.CreateDeck_WithSingleDeck_Contains52Cards" computerName="runnervmf4ws1" duration="00:00:00.0003933" startTime="2025-09-19T21:53:57.8381423+00:00" endTime="2025-09-19T21:53:57.8381424+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dfbaadb-1c64-453f-838d-42b8799a6c65" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Croupier.Tests.Domain.DeckTests.CreateDeck_WhenShuffled_HasSameCountButDifferentOrder" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="09c9cf95-84ac-ba1d-88df-dabe29e9b0f9">
+      <Execution id="b3cd3768-440c-4dea-8ae0-fca8de4cda05" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.DeckTests" name="CreateDeck_WhenShuffled_HasSameCountButDifferentOrder" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.DeckTests.CreateDeck_WithSingleDeck_Contains52Cards" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="6ed4bbf7-ce88-6058-efaf-8dc3bb6fbdc6">
+      <Execution id="6dfbaadb-1c64-453f-838d-42b8799a6c65" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.DeckTests" name="CreateDeck_WithSingleDeck_Contains52Cards" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.CardTests.CreateCard_WithKingOfHearts_GeneratesCorrectCode" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="c797dbd4-9535-7e80-0dd9-ec56ab9e3f4b">
+      <Execution id="37619e83-e1c1-46e0-a4dd-4c27ecbca03a" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.CardTests" name="CreateCard_WithKingOfHearts_GeneratesCorrectCode" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.CardTests.CreateCard_WithCustomValues_GeneratesExpectedProperties" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="054e758f-3341-a4de-f623-c5016bfeee29">
+      <Execution id="7a8dad8a-2cb0-41e5-9f4f-be851d125d0c" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.CardTests" name="CreateCard_WithCustomValues_GeneratesExpectedProperties" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_ReturnsExactlyOneCard" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="7d4246c0-9395-2af3-070a-b7607f330ac2">
+      <Execution id="e3f84499-e4de-467d-b3cb-afb7a2cab21f" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.DrawCardEndpointTests" name="DrawCard_WhenCalled_ReturnsExactlyOneCard" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Infrastructure.SessionStoreTests.ShuffleDeck_WithValidSession_MaintainsCardCount" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="38b238da-2cb3-6ffc-4ee1-bfb039bc5f1f">
+      <Execution id="c89db944-ac1d-421c-8132-61930823911d" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Infrastructure.SessionStoreTests" name="ShuffleDeck_WithValidSession_MaintainsCardCount" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.SeeDeckEndpointTests.SeeDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="3d9760ec-7c5d-687a-a821-f3e5c1afd5c6">
+      <Execution id="d132bb8b-5afe-4932-8ae6-fd9ba7a65055" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.SeeDeckEndpointTests" name="SeeDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenAllCardsDrawn_EmptiesDeck" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="a38ac826-9e7c-e830-4dbd-ba09c0ecc0c5">
+      <Execution id="f63a3388-99ba-444e-b4ff-aeec85c15532" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.DrawCardEndpointTests" name="DrawCard_WhenAllCardsDrawn_EmptiesDeck" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Infrastructure.SessionStoreTests.DrawCard_WithValidSession_ReturnsCardAndUpdatesCount" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="b7938839-3a6e-5caf-1889-2d7336b9a5de">
+      <Execution id="46645bbf-0605-467c-971b-ad3cd4d72406" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Infrastructure.SessionStoreTests" name="DrawCard_WithValidSession_ReturnsCardAndUpdatesCount" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.NewGameEndpointTests.NewGame_WhenCalled_ReturnsStringId" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="9220ef90-15c6-f0fb-8769-e05d8dc9fa40">
+      <Execution id="50914619-47d3-4ec4-a4c7-9cc7ef074a54" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.NewGameEndpointTests" name="NewGame_WhenCalled_ReturnsStringId" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Infrastructure.SessionStoreTests.NewSession_WhenCalled_ReturnsValidSessionId" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="deb76e49-fdf8-80ad-c207-c6ac3cd83786">
+      <Execution id="b618a8ab-945d-4304-85f2-d51937b7ca2d" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Infrastructure.SessionStoreTests" name="NewSession_WhenCalled_ReturnsValidSessionId" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_RemovesCardFromDeck" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="6726cf70-fa8f-4759-0749-1b20b2087d46">
+      <Execution id="319f4148-9f24-4546-9fb7-5cb3810757ee" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.DrawCardEndpointTests" name="DrawCard_WhenCalled_RemovesCardFromDeck" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.SeeDeckEndpointTests.SeeDeck_WithSingleDeck_ContainsExactly52Cards" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="55b93f81-76c4-4f54-6f79-84d863277b5e">
+      <Execution id="c8038375-c8fd-488d-858a-7e454a21ae8c" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.SeeDeckEndpointTests" name="SeeDeck_WithSingleDeck_ContainsExactly52Cards" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.DeckTests.CreateDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="454b6216-6064-ef62-d8b4-65b4907bdd4d">
+      <Execution id="d29d4a16-40ca-4c63-9a85-47b10d678d5a" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.DeckTests" name="CreateDeck_WithMultipleDecks_ContainsCorrectNumberOfCards" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.CardTests.CreateCard_WithTenValue_GeneratesCorrectCode" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="2a316688-754b-8059-dd30-37f96ccd4db8">
+      <Execution id="67cca989-8cc9-49cd-bb08-d99bc25e7aa0" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.CardTests" name="CreateCard_WithTenValue_GeneratesCorrectCode" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.CardTests.CreateCard_WithAceOfSpades_GeneratesCorrectCode" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="cde54c44-b960-4a4c-517f-de64f25de298">
+      <Execution id="8abf8781-b4de-40aa-ae82-7c234467eb99" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.CardTests" name="CreateCard_WithAceOfSpades_GeneratesCorrectCode" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.ShuffleEndpointTests.ShuffleDeck_WhenCalled_ChangesCardOrder" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="fb8a06f4-81fb-34dd-2ebf-ea17f7330427">
+      <Execution id="735348b6-b2ce-40ef-b3fe-22699ee56412" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.ShuffleEndpointTests" name="ShuffleDeck_WhenCalled_ChangesCardOrder" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Domain.DeckTests.CreateDeck_WithSpecificId_HasCorrectDeckId" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="f50a9194-5bfa-7b5f-dd1e-619b705cdeeb">
+      <Execution id="f2ab8aa4-de8b-4157-ad2b-c158b30727ab" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Domain.DeckTests" name="CreateDeck_WithSpecificId_HasCorrectDeckId" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.DrawCardEndpointTests.DrawCard_WhenCalled_ReturnsTopCardFromDeck" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="0cb9d0c1-25e5-2d52-2336-86d751cba14d">
+      <Execution id="182e0a3c-c735-4f6b-ad73-a6e695f3de0e" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.DrawCardEndpointTests" name="DrawCard_WhenCalled_ReturnsTopCardFromDeck" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Endpoints.NewGameEndpointTests.NewGame_WhenCalled_ReturnsIdWithCorrectLength" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="3f0add5e-c3e5-f760-66e6-386c33c0d8cd">
+      <Execution id="0a1c3341-06f0-4cbb-ba0f-e69a56eb6771" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Endpoints.NewGameEndpointTests" name="NewGame_WhenCalled_ReturnsIdWithCorrectLength" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Infrastructure.SessionStoreTests.GetSession_WithValidSessionId_ReturnsCorrectSession" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="eab402c8-8464-4b57-9480-17acd7374134">
+      <Execution id="28aafcbf-db57-4f2d-ba09-8dffb5cb2508" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Infrastructure.SessionStoreTests" name="GetSession_WithValidSessionId_ReturnsCorrectSession" />
+    </UnitTest>
+    <UnitTest name="Croupier.Tests.Infrastructure.SessionStoreTests.GetSession_WithInvalidSessionId_ReturnsNull" storage="/home/runner/work/croupier/croupier/croupier.tests/bin/debug/net8.0/croupier.tests.dll" id="8e0e8d78-359b-64e2-ee18-72b6476a4ec2">
+      <Execution id="6406094f-3328-4ebc-b78d-57b1d8d2e919" />
+      <TestMethod codeBase="/home/runner/work/Croupier/Croupier/Croupier.Tests/bin/Debug/net8.0/Croupier.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Croupier.Tests.Infrastructure.SessionStoreTests" name="GetSession_WithInvalidSessionId_ReturnsNull" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="eab402c8-8464-4b57-9480-17acd7374134" executionId="28aafcbf-db57-4f2d-ba09-8dffb5cb2508" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a38ac826-9e7c-e830-4dbd-ba09c0ecc0c5" executionId="f63a3388-99ba-444e-b4ff-aeec85c15532" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="054e758f-3341-a4de-f623-c5016bfeee29" executionId="7a8dad8a-2cb0-41e5-9f4f-be851d125d0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e0e8d78-359b-64e2-ee18-72b6476a4ec2" executionId="6406094f-3328-4ebc-b78d-57b1d8d2e919" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f50a9194-5bfa-7b5f-dd1e-619b705cdeeb" executionId="f2ab8aa4-de8b-4157-ad2b-c158b30727ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a316688-754b-8059-dd30-37f96ccd4db8" executionId="67cca989-8cc9-49cd-bb08-d99bc25e7aa0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6726cf70-fa8f-4759-0749-1b20b2087d46" executionId="319f4148-9f24-4546-9fb7-5cb3810757ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb8a06f4-81fb-34dd-2ebf-ea17f7330427" executionId="735348b6-b2ce-40ef-b3fe-22699ee56412" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55b93f81-76c4-4f54-6f79-84d863277b5e" executionId="c8038375-c8fd-488d-858a-7e454a21ae8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cde54c44-b960-4a4c-517f-de64f25de298" executionId="8abf8781-b4de-40aa-ae82-7c234467eb99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="454b6216-6064-ef62-d8b4-65b4907bdd4d" executionId="d29d4a16-40ca-4c63-9a85-47b10d678d5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0cb9d0c1-25e5-2d52-2336-86d751cba14d" executionId="182e0a3c-c735-4f6b-ad73-a6e695f3de0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c797dbd4-9535-7e80-0dd9-ec56ab9e3f4b" executionId="37619e83-e1c1-46e0-a4dd-4c27ecbca03a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f0add5e-c3e5-f760-66e6-386c33c0d8cd" executionId="0a1c3341-06f0-4cbb-ba0f-e69a56eb6771" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d9760ec-7c5d-687a-a821-f3e5c1afd5c6" executionId="d132bb8b-5afe-4932-8ae6-fd9ba7a65055" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d4246c0-9395-2af3-070a-b7607f330ac2" executionId="e3f84499-e4de-467d-b3cb-afb7a2cab21f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9220ef90-15c6-f0fb-8769-e05d8dc9fa40" executionId="50914619-47d3-4ec4-a4c7-9cc7ef074a54" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38b238da-2cb3-6ffc-4ee1-bfb039bc5f1f" executionId="c89db944-ac1d-421c-8132-61930823911d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09c9cf95-84ac-ba1d-88df-dabe29e9b0f9" executionId="b3cd3768-440c-4dea-8ae0-fca8de4cda05" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7938839-3a6e-5caf-1889-2d7336b9a5de" executionId="46645bbf-0605-467c-971b-ad3cd4d72406" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="deb76e49-fdf8-80ad-c207-c6ac3cd83786" executionId="b618a8ab-945d-4304-85f2-d51937b7ca2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ed4bbf7-ce88-6058-efaf-8dc3bb6fbdc6" executionId="6dfbaadb-1c64-453f-838d-42b8799a6c65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="22" executed="22" passed="22" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.19)
+[xUnit.net 00:00:00.56]   Discovering: Croupier.Tests
+[xUnit.net 00:00:00.59]   Discovered:  Croupier.Tests
+[xUnit.net 00:00:00.59]   Starting:    Croupier.Tests
+[xUnit.net 00:00:00.99]   Finished:    Croupier.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
