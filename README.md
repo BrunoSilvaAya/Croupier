@@ -5,7 +5,7 @@ The idea to build this came from a simple question I saw on Twitter: "Is there a
 
 I didn't know one already existed (and you should definitely check out www.deckofcardsapi.com), but I felt like it would be a fun little project to build on in C#
 
-And what a great chance to make us of minimal APIs and C# 10 features and capabilities
+And what a great chance to make use of minimal APIs and .NET 9 features and capabilities
 
 Thanks for stopping by and I hope you like it!
 
