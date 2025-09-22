@@ -5,7 +5,7 @@ namespace Croupier.Workers;
 public static class Shuffler
 {
     private static Random random = new Random();
-    public static Stack<Card> Shuffle (Stack<Card> cards)
+    public static Stack<Card> Shuffle(Stack<Card> cards)
     {
         var list = cards.ToList();
 

@@ -38,6 +38,6 @@ public class SessionManager : ISessionManager
             deck.Cards = Shuffler.Shuffle(deck.Cards);
             return deck.Cards;
         }
-        return null;        
+        return null;
     }
 }

@@ -77,7 +77,7 @@ public class CroupierTests
         var result = await _client.GetAsync("/draw-card?sessionId=" + id);
 
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
-        
+
         Assert.IsType<Card>(JsonSerializer.Deserialize<Card>(
             await result.Content.ReadAsStringAsync()
         ));
@@ -98,8 +98,8 @@ public class CroupierTests
         var card = JsonSerializer.Deserialize<Card>(
             await cardResult.Content.ReadAsStringAsync()
         );
-        
-        Assert.Equal(deck[0],card);
+
+        Assert.Equal(deck[0], card);
     }
     [Fact]
     public async Task DrawCardRemovesCardFromDeck()
@@ -114,7 +114,7 @@ public class CroupierTests
         );
 
         await _client.GetAsync("/draw-card?sessionId=" + id);
-        
+
         var resultAfterDraw = await _client.GetAsync("/see-deck?sessionId=" + id);
         Assert.Equal(HttpStatusCode.OK, resultAfterDraw.StatusCode);
 
@@ -124,22 +124,23 @@ public class CroupierTests
 
         Assert.NotNull(deck);
         Assert.NotNull(deckAfterDraw);
-        Assert.Equal(deck[1],deckAfterDraw[0]);
+        Assert.Equal(deck[1], deckAfterDraw[0]);
     }
     [Fact]
     public async Task DrawingAllCardsEmptiesDeck()
     {
         var id = await _client.GetStringAsync("/new-game?numberOfDecks=1");
 
-        Enumerable.Range(1,52).ToList().ForEach(e => {
+        Enumerable.Range(1, 52).ToList().ForEach(e =>
+        {
             _client.GetAsync("/draw-card?sessionId=" + id);
         });
-        
+
         var voidDraw = await _client.GetAsync("/draw-card?sessionId=" + id);
         var card = JsonSerializer.Deserialize<Card>(
             await voidDraw.Content.ReadAsStringAsync()
         );
-        
+
         var result = await _client.GetAsync("/see-deck?sessionId=" + id);
         Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 

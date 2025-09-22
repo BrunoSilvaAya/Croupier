@@ -3,7 +3,7 @@ using Croupier.Workers;
 
 namespace Croupier.Endpoints;
 
-public class DeckEndpoint : IEndpoint    
+public class DeckEndpoint : IEndpoint
 {
     private ISessionManager _manager;
     public DeckEndpoint(IServiceProvider serviceProvider)
@@ -33,7 +33,7 @@ public class DeckEndpoint : IEndpoint
         return _manager.SeeDeck(sessionId);
     }
     public Stack<Card>? ShuffleDeck(string sessionId)
-    {        
+    {
         return _manager.ShuffleDeck(sessionId);
     }
 

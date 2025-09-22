@@ -6,8 +6,8 @@ public record Card
     {
         Value = value;
         Suit = suit;
-        Code = (value[0] != '1' ? value.Substring(0,1) : value.Substring(0,2))
-            + suit.Substring(0,1);
+        Code = (value[0] != '1' ? value.Substring(0, 1) : value.Substring(0, 2))
+            + suit.Substring(0, 1);
     }
     public string Code { get; set; }
     public string Value { get; set; }
