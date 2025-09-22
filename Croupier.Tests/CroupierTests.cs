@@ -1,4 +1,14 @@
-﻿using Xunit;
+﻿// LEGACY: This file has been superseded by the organized test structure:
+// - Endpoints/NewGameEndpointTests.cs
+// - Endpoints/SeeDeckEndpointTests.cs  
+// - Endpoints/DrawCardEndpointTests.cs
+// - Endpoints/ShuffleEndpointTests.cs
+// - Domain/CardTests.cs
+// - Domain/DeckTests.cs  
+// - Infrastructure/SessionStoreTests.cs
+// Consider removing this file after confirming all functionality is covered.
+
+using Xunit;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Text.Json;
 using System.Net;
