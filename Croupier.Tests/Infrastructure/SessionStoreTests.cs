@@ -22,7 +22,7 @@ public class SessionStoreTests
         var sessionId1 = await new TestSessionBuilder()
             .WithHttpClient(_client)
             .BuildAsync();
-            
+
         var sessionId2 = await new TestSessionBuilder()
             .WithHttpClient(_client)
             .BuildAsync();
@@ -46,10 +46,10 @@ public class SessionStoreTests
         // Verify the session still exists and deck was modified
         var deckResponse = await _client.GetAsync($"/see-deck?sessionId={sessionId}");
         deckResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-        
+
         var deckJson = await deckResponse.Content.ReadAsStringAsync();
         var deck = System.Text.Json.JsonSerializer.Deserialize<List<Card>>(deckJson);
-        
+
         deck.Should().HaveCount(51, "one card should have been drawn");
     }
 
@@ -59,7 +59,7 @@ public class SessionStoreTests
         var sessionId1 = await new TestSessionBuilder()
             .WithHttpClient(_client)
             .BuildAsync();
-            
+
         var sessionId2 = await new TestSessionBuilder()
             .WithHttpClient(_client)
             .WithNumberOfDecks(2)
@@ -74,7 +74,7 @@ public class SessionStoreTests
 
         var deck1Json = await deck1Response.Content.ReadAsStringAsync();
         var deck2Json = await deck2Response.Content.ReadAsStringAsync();
-        
+
         var deck1 = System.Text.Json.JsonSerializer.Deserialize<List<Card>>(deck1Json);
         var deck2 = System.Text.Json.JsonSerializer.Deserialize<List<Card>>(deck2Json);
 

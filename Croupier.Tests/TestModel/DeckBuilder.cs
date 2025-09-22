@@ -5,16 +5,16 @@ public sealed class DeckBuilder
     private int _deckCount = 1;
     private bool _shuffled;
 
-    public DeckBuilder WithDeckCount(int count) 
-    { 
-        _deckCount = count; 
-        return this; 
+    public DeckBuilder WithDeckCount(int count)
+    {
+        _deckCount = count;
+        return this;
     }
 
-    public DeckBuilder Shuffled() 
-    { 
-        _shuffled = true; 
-        return this; 
+    public DeckBuilder Shuffled()
+    {
+        _shuffled = true;
+        return this;
     }
 
     public List<Card> Build()
@@ -22,9 +22,9 @@ public sealed class DeckBuilder
         // Create standard deck structure matching the API response
         var values = new[] { "ACE", "2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING" };
         var suits = new[] { "SPADES", "HEARTS", "CLUBS", "DIAMONDS" };
-        
+
         var cards = new List<Card>();
-        
+
         for (int deck = 0; deck < _deckCount; deck++)
         {
             foreach (var suit in suits)

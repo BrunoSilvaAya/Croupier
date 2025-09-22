@@ -68,11 +68,11 @@ public sealed class CardBuilder
     public Card Build()
     {
         var code = (_value[0] != '1' ? _value.Substring(0, 1) : _value.Substring(0, 2)) + _suit.Substring(0, 1);
-        return new Card 
-        { 
+        return new Card
+        {
             code = code,
             value = _value,
-            suit = _suit 
+            suit = _suit
         };
     }
 }

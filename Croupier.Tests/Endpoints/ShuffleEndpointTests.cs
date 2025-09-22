@@ -54,12 +54,12 @@ public class ShuffleEndpointTests
         originalDeck.Should().NotBeNull();
         shuffledDeck.Should().NotBeNull();
         originalDeck.Should().HaveCount(shuffledDeck!.Count);
-        
+
         // The deck should be shuffled (order changed)
         originalDeck.Should().NotEqual(shuffledDeck, "the deck should be shuffled");
     }
 
-    [Fact] 
+    [Fact]
     public async Task ShuffleDeck_WhenCalled_PreservesAllCards()
     {
         var sessionId = await new TestSessionBuilder()
@@ -79,14 +79,14 @@ public class ShuffleEndpointTests
 
         originalDeck.Should().NotBeNull();
         shuffledDeck.Should().NotBeNull();
-        
+
         // Should have same number of cards
         shuffledDeck.Should().HaveCount(originalDeck!.Count);
-        
+
         // Should contain all the same cards (just in different order)
         foreach (var card in originalDeck)
         {
-            shuffledDeck.Should().Contain(c => 
+            shuffledDeck.Should().Contain(c =>
                 c.code == card.code && c.value == card.value && c.suit == card.suit,
                 $"shuffled deck should contain card {card.code}");
         }

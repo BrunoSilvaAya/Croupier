@@ -26,12 +26,12 @@ public class SeeDeckEndpointTests
             .BuildAsync();
 
         var response = await _client.GetAsync("/see-deck?sessionId=" + sessionId);
-        
+
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        
+
         var deckJson = await response.Content.ReadAsStringAsync();
         var deck = JsonSerializer.Deserialize<List<Card>>(deckJson);
-        
+
         deck.Should().HaveCount(52);
     }
 
@@ -46,10 +46,10 @@ public class SeeDeckEndpointTests
         var response = await _client.GetAsync("/see-deck?sessionId=" + sessionId);
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        
+
         var deckJson = await response.Content.ReadAsStringAsync();
         var deck = JsonSerializer.Deserialize<List<Card>>(deckJson);
-        
+
         deck.Should().HaveCount(3 * 52);
     }
 

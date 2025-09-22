@@ -38,10 +38,10 @@ public sealed class TestSessionBuilder
             _client = _app.CreateClient();
         }
 
-        var endpoint = _numberOfDecks == 1 
-            ? "/new-game" 
+        var endpoint = _numberOfDecks == 1
+            ? "/new-game"
             : $"/new-game?numberOfDecks={_numberOfDecks}";
-            
+
         return await _client.GetStringAsync(endpoint);
     }
 }

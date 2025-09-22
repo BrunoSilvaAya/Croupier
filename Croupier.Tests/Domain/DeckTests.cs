@@ -30,13 +30,13 @@ public class DeckTests
         var deck = new DeckBuilder().Build();
 
         deck.Should().HaveCount(52);
-        
+
         // Check we have all suits
         deck.Should().Contain(c => c.suit == "SPADES");
         deck.Should().Contain(c => c.suit == "HEARTS");
         deck.Should().Contain(c => c.suit == "CLUBS");
         deck.Should().Contain(c => c.suit == "DIAMONDS");
-        
+
         // Check we have all values
         deck.Should().Contain(c => c.value == "ACE");
         deck.Should().Contain(c => c.value == "KING");
@@ -63,11 +63,11 @@ public class DeckTests
         var shuffledDeck = new DeckBuilder().Shuffled().Build();
 
         shuffledDeck.Should().HaveCount(originalDeck.Count);
-        
+
         // Every card in original should exist in shuffled
         foreach (var card in originalDeck)
         {
-            shuffledDeck.Should().Contain(c => 
+            shuffledDeck.Should().Contain(c =>
                 c.code == card.code && c.value == card.value && c.suit == card.suit,
                 $"shuffled deck should contain card {card.code}");
         }
@@ -81,7 +81,7 @@ public class DeckTests
             .Build();
 
         deck.Should().HaveCount(2 * 52);
-        
+
         // Should have duplicates of each card
         var aceOfSpades = deck.Where(c => c.code == "AS").ToList();
         aceOfSpades.Should().HaveCount(2, "should have 2 Aces of Spades in a 2-deck setup");

@@ -112,7 +112,7 @@ public class DrawCardEndpointTests
         // Try to draw one more card - this should cause an exception
         // Based on the error log, drawing from empty stack throws InvalidOperationException
         var response = await _client.GetAsync("/draw-card?sessionId=" + sessionId);
-        
+
         // The response should indicate a server error due to empty stack
         response.StatusCode.Should().Be(HttpStatusCode.InternalServerError);
     }
